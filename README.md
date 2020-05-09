@@ -5,7 +5,7 @@ Used for designing MDP related questions for IUST-AI982 class.
 
 https://iust-courses.github.io/ai982/
 
-## Installation
+## How to run
 Small map:
 ```bash
 python main.py type=smallWorld
