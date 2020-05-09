@@ -2,9 +2,9 @@ import tkinter as tk
 from utilities import initialize_world_parameters, Actions
 import time
 
-
 # DO NOT CHANGE THIS FILE
-actions_dict = {Actions.N: '⮙', Actions.S: '⮛', Actions.E: '⮚', Actions.W: '⮘', Actions.EXIT: 'EXIT'}
+actions_dict = {Actions.N: 'North', Actions.S: 'South',
+                Actions.E: 'East', Actions.W: 'West', Actions.EXIT: 'EXIT'}
 
 
 def create_grid(event=None):
@@ -33,7 +33,7 @@ def run_mdp(v_stars_generator, world_dims, steps=10):
         v_states = [[round(v_states[y][x], 3) for x in range(0, dh)] for y in range(dw)]
         for i, row in enumerate(v_states):
             for j, v in enumerate(row):
-                time.sleep(0.1)
+                time.sleep(1 / (dw * dw))
                 c.create_text((600 / dh) * (j + .5),
                               (600 / dw) * (i + .5),
                               text=v, fill='blue', tag='v')
