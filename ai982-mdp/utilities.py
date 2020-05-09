@@ -21,8 +21,7 @@ def initialize_world_parameters(world_type):
 def initialize_mdp_parameters(width, height, exit_locations):
     v_states = [[0 for i in range(0, width)] for j in range(height)]  # Current step's V*(s) grid.
     pre_v_states = [[0 for i in range(0, width)] for j in range(height)]  # Last step's V*(s) grid.
-    policy = [[Actions.N for i in range(0, width)] for j in range(height)]  # Current step's policy gird. (Feel
-    # free to print it if not clear
+    policy = [[Actions.N for i in range(0, width)] for j in range(height)]  # Current step's policy gird.
     for exit_state, exit_reward in exit_locations.items():
         exit_x, exit_y = exit_state
         v_states[exit_x][exit_y] = exit_reward
