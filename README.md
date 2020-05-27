@@ -8,10 +8,10 @@ https://iust-courses.github.io/ai982/
 ## How to run
 Small map:
 ```bash
-python main.py type=smallWorld
+python main.py type=smallWorld steps=10
 ```
 Large map:
 ```bash
-python main.py type=largeWorld
+python main.py type=largeWorld steps=10
 
 ```
